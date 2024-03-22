@@ -1,0 +1,86 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Devonshire&family=Dynalight&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=The+Nautigal:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lobster Two", sans-serif;
+    font-style: normal;
+}
+
+#count-down-one {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(180deg, rgba(131, 58, 180, 1) 12%, rgba(253, 29, 29, 1) 86%);
+}
+
+#count-down-one .container {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+#count-down-one .container .birthday-container {
+    color: white;
+    word-spacing: 5px;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+#count-down-one .container .timer-container {
+    display: flex;
+    /* width: 40rem; */
+    justify-content: space-between;
+}
+
+#count-down-one .container .timer-container .time-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#days,
+#hours,
+#mins {
+    font-size: 3rem;
+    width: 100px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 2s;
+}
+
+#days::after {
+    content: 'DAYS';
+}
+
+#hours::after {
+    content: 'HOURS';
+}
+
+#mins::after {
+    content: 'MINUTES   ';
+}
+
+#days::after,
+#hours::after,
+#mins::after {
+    /* content: 'DAYS'; */
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
