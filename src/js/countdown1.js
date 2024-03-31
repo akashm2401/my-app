@@ -13,55 +13,54 @@ function setCountdown(oldDays, oldHours, oldminutes) {
     var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     // var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    console.log(oldDays, days);
-    console.log(oldHours, oldHours);
-    console.log(oldminutes, oldminutes);
 
     if (oldDays != days) {
-        console.log('Day     Updated');
         var oldDays = days;
         var oldHours = hours;
         var oldminutes = minutes;
 
-        document.getElementById('days').style='transform: rotateX(360deg);';
-        document.getElementById('hours').style='transform: rotateX(360deg);';
-        document.getElementById('mins').style='transform: rotateX(360deg);';
+        document.getElementById('days').style='transform: rotateX(180deg);';
+        document.getElementById('hours').style='transform: rotateX(180deg);';
+        document.getElementById('mins').style='transform: rotateX(180deg);';
 
-        document.getElementById('days').innerHTML=days;
-        document.getElementById('hours').innerHTML=hours;
-        document.getElementById('mins').innerHTML=minutes;
+        setTimeout(() => {
+            document.getElementById('days').innerHTML=days;
+            document.getElementById('hours').innerHTML=hours;
+            document.getElementById('mins').innerHTML=minutes;
+        })
 
     } else if (oldHours != hours) {
-        console.log('Hour Updated');
         var oldHours = hours;
         var oldminutes = minutes;
 
-        document.getElementById('hours').style='transform: rotateX(360deg);';
-        document.getElementById('mins').style='transform: rotateX(360deg);';
+        document.getElementById('hours').style='transform: rotateX(180deg);';
+        document.getElementById('mins').style='transform: rotateX(180deg);';
 
-        document.getElementById('hours').innerHTML=hours;
-        document.getElementById('mins').innerHTML=minutes;
+        setTimeout(() => {
+            document.getElementById('hours').innerHTML=hours;
+            document.getElementById('mins').innerHTML=minutes;
+        })
 
     } else if (oldminutes != minutes) {
-        console.log('Minute Updated');
         var oldminutes = minutes;
-        document.getElementById('mins').style='transform: rotateX(360deg);';
+        document.getElementById('mins').style='transform: rotateX(180deg);';
 
         document.getElementById('mins').innerHTML=minutes;
 
     } else {
-        console.log('Nothing updated');
         var oldDays = days;
         var oldHours = hours;
         var oldminutes = minutes;
 
-        document.getElementById('days').innerHTML=days;
-        document.getElementById('hours').innerHTML=hours;
-        document.getElementById('mins').innerHTML=minutes;
-
         document.getElementById('days').style='transform: rotateX(0deg);';
         document.getElementById('hours').style='transform: rotateX(0deg);';
         document.getElementById('mins').style='transform: rotateX(0deg);';
+
+        setTimeout(() => {
+            document.getElementById('days').innerHTML=days;
+            document.getElementById('hours').innerHTML=hours;
+            document.getElementById('mins').innerHTML=minutes;
+        })
     }
 
 
@@ -72,7 +71,6 @@ function setCountdown(oldDays, oldHours, oldminutes) {
 
 
     setTimeout(() => {
-        console.log("t")
         oldDays = days;
         oldHours = hours;
         oldminutes = minutes;
@@ -89,3 +87,26 @@ var days = Math.floor(difference / (1000 * 60 * 60 * 24));
 var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 setCountdown(days, hours, minutes);
+
+
+// function playBackgroundAudio() {
+//     var audio = document.getElementById("background-music");
+
+//     // Check if the audio is supported and can be played
+//     if (audio.canPlayType) {
+//         console.log("Playing audio..")
+//         // Set the source of the audio element
+//         audio.src = "../../assets/audios/ticking-clock_1-27477.mp3";
+
+//         // Autoplay the audio
+//         audio.play().catch(function(error) {
+//         // Autoplay was prevented. You might want to handle this case.
+//         console.error("Autoplay was prevented:", error);
+//         });
+
+//         // Loop the audio
+//         audio.loop = true;
+//     }
+// }
+
+// playBackgroundAudio();
