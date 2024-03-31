@@ -104,6 +104,10 @@ body{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    #count-down-one .container{
+        margin: 15px 0;
+    }
+
     #count-down-one .container .birthday-container{
         font-size: 3rem;
         text-align: center;
@@ -196,11 +200,6 @@ body{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    #count-down-one .container{
-        /* background-color: aqua; */
-        /* margin-top: 60px; */
-    }
-
     #frame-one, #frame-two{
         /* margin: 0 auto; */
         left: calc(50% - 125px);
@@ -212,7 +211,7 @@ body{
 
     #photo1{
         height: 220px;
-        top: 2%;
+        top: 4%;
         left: calc(50% - 86px);
     }
 
