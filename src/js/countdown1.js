@@ -78,10 +78,10 @@ function setCountdown(oldDays, oldHours, oldminutes) {
         // redirecting to wishes page on 4 April
         let date = new Date();
         console.log(date);
-        if (date >= new Date("2024-04-04")){      // change date to 4 April
-            window.location.href="wish.html"
-            return;
-        }
+        // if (date >= new Date("2024-04-04")){      // change date to 4 April
+        //     window.location.href="wish.html"
+        //     return;
+        // }
 
         setCountdown(oldDays, oldHours, oldminutes);
 
