@@ -106,21 +106,21 @@ body{
     padding: 2px;
     text-align: center;
     position: relative;
-    animation: scrollStory 40s infinite ease; 
+    animation: scrollStory 4s infinite ease; 
     animation-fill-mode: forwards;
-    /* right: 1200px; */
+    right: 0px;
 }
 
 @keyframes scrollStory {
     0%   {right: 0px;}
-    90% {right: 1200px;}
-    100% {right: 0;}
+    95% {right: 3000px;}
+    5% {right: 0;}
 }
 
 @media only screen and (max-width: 600px) {
     @keyframes scrollStory {
         0%   {right: 0px;}
-        90% {right: 2190px;}
+        90% {right: 3800px;}
         100% {right: 0;}
     }
 }
