@@ -106,7 +106,7 @@ body{
     padding: 2px;
     text-align: center;
     position: relative;
-    animation: scrollStory 4s infinite ease; 
+    animation: scrollStory 40s infinite ease; 
     animation-fill-mode: forwards;
     right: 0px;
 }
